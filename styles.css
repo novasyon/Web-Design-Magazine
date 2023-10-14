@@ -1,3 +1,8 @@
+/*
+* Magazine Style CSS
+* By Louis D @ Seo2k.com
+*/
+/* Resetting default margin, padding, and box-sizing for all elements and pseudo-elements */
 *,
 ::before,
 ::after {
@@ -6,16 +11,19 @@
   box-sizing: border-box;
 }
 
+/* Setting the base font size for the document to 62.5% (equal to 10px) */
 html {
   font-size: 62.5%;
 }
 
+/* Styling the body element with background color, font family, and text color */
 body {
   font-family: 'Baskervville', serif;
   color: linen;
   background-color: rgb(20, 30, 40);
 }
 
+/* Styling headings (h1, h2, h3, h4, h5, h6) with font family */
 h1 {
   font-family: 'Anton', sans-serif;
 }
@@ -24,27 +32,32 @@ h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
 
+/* Styling anchor (link) elements with no text decoration and a specific color */
 a {
   text-decoration: none;
   color: linen;
 }
 
+/* Styling the main content section using CSS grid layout */
 main {
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
   row-gap: 3rem;
 }
 
+/* Styling images to have a width of 100% and cover their container */
 img {
   width: 100%;
   object-fit: cover;
 }
 
+/* Styling horizontal rules with margin and border */
 hr {
   margin: 1.5rem 0;
   border: 1px solid rgba(120, 120, 120, 0.6);
 }
 
+/* Styling a section with the class "heading" using grid layout */
 .heading {
   grid-column: 2 / 3;
   display: grid;
@@ -52,6 +65,7 @@ hr {
   row-gap: 1.5rem;
 }
 
+/* Styling a section with the class "text" */
 .text {
   grid-column: 2 / 3;
   font-size: 1.8rem;
@@ -60,11 +74,13 @@ hr {
   text-align: justify;
 }
 
+/* Styling a section with the class "hero" */
 .hero {
   grid-column: 1 / -1;
   position: relative;
 }
 
+/* Styling the hero title and subtitle */
 .hero-title {
   text-align: center;
   color: orangered;
@@ -77,19 +93,23 @@ hr {
   text-align: center;
 }
 
+/* Styling the author information */
 .author {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
 }
 
+/* Adding a hover effect to author names */
 .author-name a:hover {
   background-color: #306203;
 }
 
+/* Styling the publish date with transparency */
 .publish-date {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* Styling a section with the class "social-icons" using CSS grid */
 .social-icons {
   display: grid;
   font-size: 3rem;
@@ -99,6 +119,7 @@ hr {
   align-items: center;
 }
 
+/* Styling the first letter of paragraphs */
 .first-paragraph::first-letter {
   font-size: 6rem;
   color: orangered;
@@ -106,6 +127,7 @@ hr {
   margin-right: 1rem;
 }
 
+/* Styling a quote with specific color, font, and content before and after */
 .quote {
   color: #00beef;
   font-size: 2.4rem;
@@ -121,6 +143,7 @@ hr {
   content: ' "';
 }
 
+/* Styling a section with the class "text-with-images" */
 .text-with-images {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -128,6 +151,7 @@ hr {
   margin-bottom: 3rem;
 }
 
+/* Styling lists with no list-style and margin for list items */
 .lists {
   list-style-type: none;
   margin-top: 2rem;
@@ -137,10 +161,12 @@ hr {
   margin-bottom: 1.5rem;
 }
 
+/* Styling elements with the classes "list-title" and "list-subtitle" */
 .list-title, .list-subtitle {
   color: #00beef;
 }
 
+/* Styling an image wrapper using CSS grid */
 .image-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -153,6 +179,7 @@ hr {
   grid-column: 1 / -1;
 }
 
+/* Media queries for responsiveness */
 @media only screen and (max-width: 720px) {
   .image-wrapper {
     grid-template-columns: 1fr;
@@ -185,8 +212,9 @@ hr {
     font-size: 1.6rem;
   } 
 }
-@media only screen and (max-width: 420px){
-    .hero-title{
+
+@media only screen and (max-width: 420px) {
+    .hero-title {
       font-size: 4.5rem;
     }
-  }
+}
